@@ -1,0 +1,30 @@
+<form class="auth-form">
+    <h2 class="auth-form__title">NFT Access</h2>
+    <p class="auth-form__desc">Please fill your detail to access your account.</p>
+    <label>
+        <span class="auth-form__type">Email</span>
+        <div class="input-container">
+            <input class="auth-form__input" type="email" name="email" [(ngModel)]="inputText"
+                placeholder="Enter your email">
+            <span (click)="inputText = ''" class="auth-form__icon"><img src="./assets/x-icon.svg" alt="X"></span>
+        </div>
+    </label>
+    <label>
+        <span class="auth-form__type">Password</span>
+        <div class="input-container">
+            <input class="auth-form__input" [type]="passwordShow ? 'text' : 'password' " placeholder="Password">
+            <span (click)="passwordShow = !passwordShow" class="auth-form__icon"><img src="./assets/hide-icon.svg" alt="X"></span>
+        </div>
+    </label>
+    <div class="auth-form__element">
+        <div class="auth-form__checkbox-container">
+            <input class="auth-form__checkbox" type="checkbox">
+            <span class="auth-form__remember">Remember me</span>
+        </div>
+        <a href="/" class="auth-form__forget">Forgot Password?</a>
+    </div>
+    <button class="btn auth-form__btn">Sign in</button>
+    <a href="/" class="btn auth-form__google"><img src="./assets/google.svg" alt="Google">Sign in with Google</a>
+    <h5 class="auth-form__account">Don’t have an account? <a href="/" class="auth-form__sign">Sign up</a></h5>
+
+</form>
